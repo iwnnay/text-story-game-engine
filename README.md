@@ -5,8 +5,15 @@ This is a game engine designed to work with most modern JavaScript front-end fra
 and node.js.
 
 # Installation
-Still working on this, don't have it installed anywhere yet. Not even sure how
-it's done.
+Require it through NPM or Yarn
+
+### NPM
+
+    npm require text-story-game-engine
+
+### Yarn
+
+    yarn add text-story-game-engine
 
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
