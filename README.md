@@ -15,6 +15,8 @@ Require it through NPM or Yarn
 
     yarn add text-story-game-engine
 
+import GameEngine from 'text-story-game-engine';
+
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
 
