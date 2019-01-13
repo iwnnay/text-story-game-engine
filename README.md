@@ -21,6 +21,11 @@ Add the following line to your code
 
     import GameEngine from 'text-story-game-engine';
 
+The simplest method of loading game data is to use the LocalDataProvider. You can
+access the data providers like this:
+
+    const { dataProviders } = GameEngine;
+
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
 
