@@ -1,0 +1,25 @@
+{
+  "name": "text-story-game-engine",
+  "version": "0.0.0",
+  "description": "A game engine for developing text based games",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwnnay/text-story-game-engine.git"
+  },
+  "keywords": [
+    "text",
+    "game",
+    "engine",
+    "javascript"
+  ],
+  "author": "Joe Imhoff <iwnnay@gmail.com> (http://joeimhoff.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/iwnnay/text-story-game-engine/issues"
+  },
+  "homepage": "https://github.com/iwnnay/text-story-game-engine#readme"
+}
