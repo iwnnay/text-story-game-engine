@@ -1,11 +1,8 @@
+'use strict';
 import Engine from './engine/game';
 import Local from './data_providers/local';
 
-exports.Game = {
-  Engine,
-  dataProviders: {
-    Local,
-  }
-};
+Engine.dataProviders = { Local };
 
-// module.exports = Engine;
+module.exports = Engine;
+Object.defineProperty('default', module.exports, { get: Engine });
