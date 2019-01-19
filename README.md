@@ -26,6 +26,10 @@ access the data providers like this:
 
     const { dataProviders } = GameEngine;
 
+For now we'll use the LocalDataProvider which can be found like this:
+
+    const { Local } = dataProviders;
+
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
 
