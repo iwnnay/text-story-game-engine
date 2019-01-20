@@ -30,6 +30,11 @@ For now we'll use the LocalDataProvider which can be found like this:
 
     const { Local } = dataProviders;
 
+Build your local data
+-- TODO: Add link to data structure guide
+
+    data = { locations: { ... } };
+
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
 
