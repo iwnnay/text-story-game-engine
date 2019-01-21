@@ -12,7 +12,8 @@ export default class {
   }
 
   get objectsAndActions() {
-    return [];
+    return [
+    ];
   }
 
   describe() {

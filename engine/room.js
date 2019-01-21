@@ -43,7 +43,7 @@ export default class Room {
   get itemDescriptions() {
     return this.items.filter(item => item.isVisible).map(item => ({
       isNew: !item.hasSeen,
-      overview: item.describe,
+      overview: item.name,
     }));
   }
 

@@ -47,8 +47,12 @@ export default class Item {
   get itemDesciptions() {
     return this.items.filter(item => item.isVisible).map(item => ({
       isNew: !item.hasSeen,
-      overview: item.describe,
+      overview: item.name,
     }));
+  }
+
+  get name() {
+    return this.loadedData.name;
   }
 
   get visibility() {
