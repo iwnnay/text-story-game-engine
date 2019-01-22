@@ -35,6 +35,10 @@ Build your local data
 
     data = { locations: { ... } };
 
+Pass that data to the data provider
+
+    localDataProvider = new Local(data);
+
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
 
