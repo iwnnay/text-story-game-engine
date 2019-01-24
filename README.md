@@ -39,6 +39,10 @@ Pass that data to the data provider
 
     localDataProvider = new Local(data);
 
+Finally create the game
+
+    const game = new GameEngine(localDataProvider, 'startLocationName');
+
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
 
