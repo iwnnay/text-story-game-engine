@@ -21,6 +21,7 @@ Add the following line to your code
 
     import GameEngine from 'text-story-game-engine';
 
+# Basic Usage
 The simplest method of loading game data is to use the LocalDataProvider. You can
 access the data providers like this:
 
