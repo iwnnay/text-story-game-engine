@@ -22,6 +22,7 @@ Add the following line to your code
     import GameEngine from 'text-story-game-engine';
 
 # Basic Usage
+## Getting Started
 The simplest method of loading game data is to use the LocalDataProvider. You can
 access the data providers like this:
 
@@ -43,6 +44,13 @@ Pass that data to the data provider
 Finally create the game
 
     const game = new GameEngine(localDataProvider, 'startLocationName');
+
+## Display a room
+The engine leaves you the freedomm to create or display a room however you wish
+but in order to get the description of the room and visible items use the descibe
+method on the situation.
+
+    const currentMove = game.situation.describe();
 
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
