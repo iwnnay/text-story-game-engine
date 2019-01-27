@@ -52,6 +52,12 @@ method on the situation.
 
     const currentMove = game.situation.describe();
 
+## Interact
+The game engine then takes human speech like commands to tell the game what to
+do next. The game engine recieves that string like this:
+
+    game.processCommand('Open the door')
+
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
 
