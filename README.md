@@ -58,6 +58,10 @@ do next. The game engine recieves that string like this:
 
     game.processCommand('Open the door')
 
+Punctionation does not matter. The string is taken apart to see if there are
+actions and nouns and then does those actions to those nouns. If nothing can
+be put together then the same information as before is displayed
+
 # What it can do
 At the moment... it can display some text. Yes, that's it. For now.
 
