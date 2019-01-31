@@ -12,8 +12,10 @@ export default class {
   }
 
   get objectsAndActions() {
-    return [
-    ];
+    return this.focus.items.map((i) => {
+      // return tuple of items then actions
+      //
+    });
   }
 
   describe() {
