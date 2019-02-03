@@ -1,3 +1,6 @@
+export function availableInteractiveItems(focus) {
+}
+
 export function process(textInput, situation) {
   const context = situation.objectsAndActions;
 

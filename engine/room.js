@@ -10,50 +10,13 @@
  * }
  */
 import Item from './item';
-import { didHappen } from './dice';
 
-export default class Room {
-  constructor(data) {
-    this.data = data;
-  }
-
-  set data(data) {
-    this.loadedData = data;
-    this.hasSeen = data.hasSeen || false;
-    this.items = [];
-
-    data.items.forEach((itemData) => {
-      this.items.push(new Item(itemData));
-    });
-  }
-
+export default class Room extends Item {
   get data() {
     return {
       ...this.loadedData,
       hasSeen: this.hasSeen,
+      isVisible: true
     };
-  }
-
-  get describe() {
-    this.calculateItemVisibility();
-
-    return this.loadedData.describe;
-  }
-
-  get itemDescriptions() {
-    return this.items.filter(item => item.isVisible).map(item => ({
-      isNew: !item.hasSeen,
-      overview: item.name,
-    }));
-  }
-
-  calculateItemVisibility() {
-    this.items.forEach((item) => {
-      if (!item.isVisible) {
-        if (didHappen(item.visibility)) {
-          item.markVisible();
-        }
-      }
-    });
   }
 }

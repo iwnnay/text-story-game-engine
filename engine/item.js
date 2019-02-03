@@ -16,6 +16,8 @@
  *   }
  * }
  */
+import { didHappen } from './dice';
+
 export default class Item {
   constructor(data) {
     this.data = data;
@@ -41,6 +43,8 @@ export default class Item {
   }
 
   get describe() {
+    this.calculateItemVisibility();
+
     return this.loadedData.describe;
   }
 
@@ -61,5 +65,15 @@ export default class Item {
 
   markVisible() {
     this.isVisible = true;
+  }
+
+  calculateItemVisibility() {
+    this.items.forEach((item) => {
+      if (!item.isVisible) {
+        if (didHappen(item.visibility)) {
+          item.markVisible();
+        }
+      }
+    });
   }
 }

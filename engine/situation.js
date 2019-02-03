@@ -11,13 +11,6 @@ export default class {
     this.currentRoom = room;
   }
 
-  get objectsAndActions() {
-    return this.focus.items.map((i) => {
-      // return tuple of items then actions
-      //
-    });
-  }
-
   describe() {
     return {
       focus: this.current,
