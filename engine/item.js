@@ -42,19 +42,6 @@ export default class Item {
     };
   }
 
-  get describe() {
-    this.calculateItemVisibility();
-
-    return this.loadedData.describe;
-  }
-
-  get itemDesciptions() {
-    return this.items.filter(item => item.isVisible).map(item => ({
-      isNew: !item.hasSeen,
-      overview: item.name,
-    }));
-  }
-
   get name() {
     return this.loadedData.name;
   }
@@ -62,6 +49,20 @@ export default class Item {
   get visibility() {
     return this.loadedData.visibility || 100;
   }
+
+  describe() {
+    this.calculateItemVisibility();
+
+    return this.loadedData.describe;
+  }
+
+  describeItems() {
+    return this.items.filter(item => item.isVisible).map(item => ({
+      isNew: !item.hasSeen,
+      overview: item.name,
+    }));
+  }
+
 
   markVisible() {
     this.isVisible = true;

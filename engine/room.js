@@ -12,6 +12,17 @@
 import Item from './item';
 
 export default class Room extends Item {
+  set data(data) {
+    this.loadedData = data;
+    this.hasSeen = data.hasSeen || false;
+    this.isVisible = true;
+    this.items = [];
+
+    (data.items || []).forEach((itemData) => {
+      this.items.push(new Item(itemData));
+    });
+  }
+
   get data() {
     return {
       ...this.loadedData,

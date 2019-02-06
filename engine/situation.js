@@ -21,8 +21,8 @@ export default class {
   get current() {
     return {
       isNew: !this.focus.hasSeen,
-      overview: this.focus.describe,
-      items: this.focus.itemDescriptions,
+      overview: this.focus.describe(),
+      items: this.focus.describeItems(),
     };
   }
 }
