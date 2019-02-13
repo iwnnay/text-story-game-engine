@@ -4,7 +4,7 @@
   "description": "A game engine for developing text based games",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,21 @@
     "url": "https://github.com/iwnnay/text-story-game-engine/issues"
   },
   "homepage": "https://github.com/iwnnay/text-story-game-engine#readme",
+
+  "jest": {
+    "modulePaths": ["/shared/vendor/modules"],
+    "moduleFileExtensions": ["js", "jsx"],
+    "moduleDirectories": ["node_modules", "bower_components", "shared"],
+
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+
+      "^react(.*)$": "<rootDir>/vendor/react-master$1",
+      "^config$": "<rootDir>/configs/app-config.js"
+    }
+  },
+
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -31,6 +46,7 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
