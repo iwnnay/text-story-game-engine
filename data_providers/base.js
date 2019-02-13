@@ -11,6 +11,6 @@ export default class BaseDataProvider {
       }
       return data;
     }
-    throw new Error(`We don't current support locations requested like: ${name}`);
+    throw new Error(`We don't currently support locations requested like: ${name}`);
   }
 }
