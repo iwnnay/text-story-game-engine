@@ -1,4 +1,9 @@
 module.exports = {
+  plugins: [
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-syntax-dynamic-import',
+    'react-hot-loader/babel',
+  ],
   presets: [
     [
       '@babel/preset-env',
@@ -9,10 +14,15 @@ module.exports = {
       },
     ],
     ['env', { modules: false }],
+    '@babel/preset-react',
   ],
   env: {
     test: {
-      plugins: ['transform-es2015-modules-commonjs'],
+      plugins: ['babel-plugin-dynamic-import-node'],
     },
+    presets: [
+      '@babel/preset-env',
+      '@babel/preset-react',
+    ],
   },
 };

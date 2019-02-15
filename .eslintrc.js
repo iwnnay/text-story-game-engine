@@ -2,7 +2,7 @@ module.exports = {
   parser: 'babel-eslint',
   extends: 'airbnb',
   rules: {
-    'react/jsx-filename-extension': [1, { "extensions": [".js", ".jsx"] }]
+    'react/jsx-filename-extension': [1, { "extensions": [".js", ".jsx"] }],
     'jest/no-disabled-tests': 'warn',
     'jest/no-focused-tests': 'warn',
     'jest/no-identical-title': 'error',
